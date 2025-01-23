@@ -36,9 +36,11 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0069-sqrtx](https://github.com/navya0980/Leetcode/tree/master/0069-sqrtx) |
+| [0278-first-bad-version](https://github.com/navya0980/Leetcode/tree/master/0278-first-bad-version) |
 | [0374-guess-number-higher-or-lower](https://github.com/navya0980/Leetcode/tree/master/0374-guess-number-higher-or-lower) |
 ## Interactive
 |  |
 | ------- |
+| [0278-first-bad-version](https://github.com/navya0980/Leetcode/tree/master/0278-first-bad-version) |
 | [0374-guess-number-higher-or-lower](https://github.com/navya0980/Leetcode/tree/master/0374-guess-number-higher-or-lower) |
 <!---LeetCode Topics End-->
