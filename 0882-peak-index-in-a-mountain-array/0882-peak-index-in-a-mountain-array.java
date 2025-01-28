@@ -10,9 +10,9 @@ class Solution {
                 
             }
             else if(arr[mid]<arr[mid+1])
-            start=mid;
+            start=mid+1;
             else if(arr[mid]>arr[mid+1])
-            end=mid;
+            end=mid-1;
            
         }
         return mid;
