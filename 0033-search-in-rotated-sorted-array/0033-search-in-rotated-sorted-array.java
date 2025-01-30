@@ -14,8 +14,9 @@ class Solution {
         }
        int ans=findElement(nums,target);
       
-       if(ans!=-1){ if(nums[ans]==target)
-       return ans;
+       if(ans!=-1){ 
+        if(nums[ans]==target)
+            return ans;
            else if(target<=nums[ans]&&target>=nums[start]){
            return binarySearch(nums,target,start,ans);
         }else{
@@ -38,7 +39,7 @@ static int findElement(int[] nums,int target){
             return mid;
             else if(nums[mid]>nums[nums.length-1]){
                 start=mid+1;
-            }else if(nums[mid]<nums[nums.length-1]){
+            }else{
                 end=mid-1;
             }
         }
