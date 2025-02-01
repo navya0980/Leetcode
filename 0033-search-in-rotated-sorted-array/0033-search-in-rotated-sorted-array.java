@@ -37,7 +37,7 @@ static int findElement(int[] nums,int target){
             }
             else if(nums[mid]>nums[mid+1])
             return mid;
-            else if(nums[mid]>nums[nums.length-1]){
+            else if(nums[mid]>=nums[nums.length-1]){
                 start=mid+1;
             }else{
                 end=mid-1;
