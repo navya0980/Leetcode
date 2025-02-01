@@ -17,7 +17,7 @@ class Solution {
        if(ans!=-1){ 
         if(nums[ans]==target)
             return ans;
-           else if(target>=nums[start]){
+           else if(target<=nums[ans]&&target>=nums[start]){
            return binarySearch(nums,target,start,ans);
         }else{
            return binarySearch(nums,target,ans+1,end);
