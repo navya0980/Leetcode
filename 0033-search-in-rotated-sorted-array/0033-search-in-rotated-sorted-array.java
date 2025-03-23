@@ -14,12 +14,16 @@ class Solution {
         if(nums[start]<nums[end])
           return binarySearch(nums,start,end,target);
         int pivot=findPivot(nums,start,end);
-        if(pivot!=-1&&nums[pivot]==target)
-         return pivot;
-       
-        if(target>=nums[0]){
-          return binarySearch(nums,0,pivot,target);
+        if(pivot!=-1){
+            if(nums[pivot]==target)
+              return pivot;
+            else if(target>=nums[0]){
+              return binarySearch(nums,0,pivot,target);
         }
+             
+        }
+      
+        
        
             return binarySearch(nums,pivot+1,nums.length-1,target);
       
