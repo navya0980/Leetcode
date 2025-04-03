@@ -9,78 +9,64 @@
  
 class Solution {
     public int findInMountainArray(int target, MountainArray mountainArr) {
-        if(mountainArr.length()==1 ){
-            if(mountainArr.get(0)==target)
-             return 0;
-            else
-             return -1;
+        if(mountainArr.length()==1){
+            if(mountainArr.get(0)==target){
+                return 0;
+            }else{
+                return -1;
+            }
         }
         if(mountainArr.length()==0){
-            return -1;
+            return 0;
         }
-        int start=0;
-        int end=mountainArr.length()-1;
-        int peak=findPeak(start,end,mountainArr);
-        if(peak!=-1 ){
-            if(mountainArr.get(peak)==target)
-            return peak;
-            
+        int s=0;
+        int e=mountainArr.length()-1;
+        int p=find( mountainArr,s,e);
+        if(p==-1){
+          return binary(mountainArr,s,e,target,true);
         }
-        else
-         return binarySearch(start,end,mountainArr,target,true);
-
-      
-        int ans=binarySearch(start,peak,mountainArr,target,true);
+        int ans=binary(mountainArr,0,p,target,true);
         if(ans==-1){
-           ans= binarySearch(peak+1,end,mountainArr,target,false);
+            ans=binary(mountainArr,p+1,e,target,false);
         }
-       
-           return ans;
+        return ans;
         
-        
-
-       
-   
     }
-    static int binarySearch(int start,int end,MountainArray mountainArr,int target,boolean isAsc){
-           while(start<=end)
-           {
-            int mid=start+(end-start)/2;
-            if(mountainArr.get(mid)==target){
-                return mid;
+    static int binary(MountainArray mountainArr,int s,int e,int t,boolean a){
+        while(s<=e){
+            int m=s+(e-s)/2;
+            if(mountainArr.get(m)==t){
+                return m;
             }
-            if(isAsc==true){
-                if(mountainArr.get(mid)>target)
-                 end=mid-1;
-                 else start=mid+1;
-
+            if(a){
+                if(mountainArr.get(m)>t){
+                    e=m-1;
+                }else{
+                    s=m+1;
+                }
             }else{
-                if(mountainArr.get(mid)>target)
-                 start=mid+1;
-                 else end=mid-1;
-
-
-            }
-           }
-           return -1;
-    }
-    
-     static int findPeak(int start,int end,MountainArray mountainArr){
-         while(start<end){
-            int mid=start+(end-start)/2;
-            if(mountainArr.get(mid)>mountainArr.get(mid+1)){
-                if(mountainArr.get(mid)>mountainArr.get(mid-1)){
-                    return mid;
+                if(mountainArr.get(m)<t){
+                    e=m-1;
+                }else{
+                    s=m+1;
                 }
-                else{
-                      end=mid-1;
-                }
-                
             }
-            else
-             start=mid+1;
-          
         }
-        return start;
-     }
+        return -1;
+    }
+    static int find(MountainArray mountainArr,int s,int e){
+        while(s<=e){
+            int m=s+(e-s)/2;
+            if(mountainArr.get(m)>mountainArr.get(m+1)){
+                if(mountainArr.get(m)>mountainArr.get(m-1)){
+                    return m;
+                }else{
+                    e=m-1;
+                }
+            }else{
+                s=m+1;
+            }
+        }
+        return -1;
+    }
 }
