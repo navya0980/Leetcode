@@ -56,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/navya0980/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1791-richest-customer-wealth](https://github.com/navya0980/Leetcode/tree/master/1791-richest-customer-wealth) |
 | [1878-check-if-array-is-sorted-and-rotated](https://github.com/navya0980/Leetcode/tree/master/1878-check-if-array-is-sorted-and-rotated) |
+| [2714-left-and-right-sum-differences](https://github.com/navya0980/Leetcode/tree/master/2714-left-and-right-sum-differences) |
 ## Binary Search
 |  |
 | ------- |
@@ -89,6 +90,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0410-split-array-largest-sum](https://github.com/navya0980/Leetcode/tree/master/0410-split-array-largest-sum) |
+| [2714-left-and-right-sum-differences](https://github.com/navya0980/Leetcode/tree/master/2714-left-and-right-sum-differences) |
 ## Hash Table
 |  |
 | ------- |
