@@ -27,6 +27,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0013-roman-to-integer](https://github.com/navya0980/Leetcode/tree/master/0013-roman-to-integer) |
 | [0125-valid-palindrome](https://github.com/navya0980/Leetcode/tree/master/0125-valid-palindrome) |
 | [2219-maximum-number-of-words-found-in-sentences](https://github.com/navya0980/Leetcode/tree/master/2219-maximum-number-of-words-found-in-sentences) |
+| [2406-decode-the-message](https://github.com/navya0980/Leetcode/tree/master/2406-decode-the-message) |
 | [3194-find-words-containing-character](https://github.com/navya0980/Leetcode/tree/master/3194-find-words-containing-character) |
 ## Dynamic Programming
 |  |
@@ -102,6 +103,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0013-roman-to-integer](https://github.com/navya0980/Leetcode/tree/master/0013-roman-to-integer) |
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
+| [2406-decode-the-message](https://github.com/navya0980/Leetcode/tree/master/2406-decode-the-message) |
 ## Bit Manipulation
 |  |
 | ------- |
