@@ -27,6 +27,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0013-roman-to-integer](https://github.com/navya0980/Leetcode/tree/master/0013-roman-to-integer) |
 | [0125-valid-palindrome](https://github.com/navya0980/Leetcode/tree/master/0125-valid-palindrome) |
 | [2219-maximum-number-of-words-found-in-sentences](https://github.com/navya0980/Leetcode/tree/master/2219-maximum-number-of-words-found-in-sentences) |
+| [3194-find-words-containing-character](https://github.com/navya0980/Leetcode/tree/master/3194-find-words-containing-character) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -61,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1878-check-if-array-is-sorted-and-rotated](https://github.com/navya0980/Leetcode/tree/master/1878-check-if-array-is-sorted-and-rotated) |
 | [2219-maximum-number-of-words-found-in-sentences](https://github.com/navya0980/Leetcode/tree/master/2219-maximum-number-of-words-found-in-sentences) |
 | [2714-left-and-right-sum-differences](https://github.com/navya0980/Leetcode/tree/master/2714-left-and-right-sum-differences) |
+| [3194-find-words-containing-character](https://github.com/navya0980/Leetcode/tree/master/3194-find-words-containing-character) |
 ## Binary Search
 |  |
 | ------- |
