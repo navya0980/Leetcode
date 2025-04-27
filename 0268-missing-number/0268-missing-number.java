@@ -1,19 +1,15 @@
 class Solution {
     public int missingNumber(int[] nums) {
         int n=nums.length;
-        for(int i=0;i<=n;i++){
-            int flag=0;
-            for(int j=0;j<=n-1;j++){
-                if(nums[j]==i){
-                    flag=1;
-                    break;
-                }
-            }
-            if(flag==0){
-                return i;
-
-            }
+       int[] hash=new int[n+1];
+       for(int i=0;i<n;i++){
+        hash[nums[i]]+=1;
+       }
+       for(int i=0;i<hash.length;i++){
+        if(hash[i]==0){
+            return i;
         }
-        return -1;
+       }
+       return -1;
     }
 }
