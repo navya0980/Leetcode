@@ -70,6 +70,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0283-move-zeroes](https://github.com/navya0980/Leetcode/tree/master/0283-move-zeroes) |
 | [0410-split-array-largest-sum](https://github.com/navya0980/Leetcode/tree/master/0410-split-array-largest-sum) |
 | [0485-max-consecutive-ones](https://github.com/navya0980/Leetcode/tree/master/0485-max-consecutive-ones) |
+| [0560-subarray-sum-equals-k](https://github.com/navya0980/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0745-find-smallest-letter-greater-than-target](https://github.com/navya0980/Leetcode/tree/master/0745-find-smallest-letter-greater-than-target) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/navya0980/Leetcode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [1185-find-in-mountain-array](https://github.com/navya0980/Leetcode/tree/master/1185-find-in-mountain-array) |
@@ -116,6 +117,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0410-split-array-largest-sum](https://github.com/navya0980/Leetcode/tree/master/0410-split-array-largest-sum) |
+| [0560-subarray-sum-equals-k](https://github.com/navya0980/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [2714-left-and-right-sum-differences](https://github.com/navya0980/Leetcode/tree/master/2714-left-and-right-sum-differences) |
 ## Hash Table
 |  |
@@ -125,6 +127,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0073-set-matrix-zeroes](https://github.com/navya0980/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0169-majority-element](https://github.com/navya0980/Leetcode/tree/master/0169-majority-element) |
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
+| [0560-subarray-sum-equals-k](https://github.com/navya0980/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [2406-decode-the-message](https://github.com/navya0980/Leetcode/tree/master/2406-decode-the-message) |
 ## Bit Manipulation
 |  |
