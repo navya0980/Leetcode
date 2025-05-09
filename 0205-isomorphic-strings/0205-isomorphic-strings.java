@@ -10,7 +10,7 @@ class Solution {
                 }else{
                     return false;
                 }
-            }else if(map.containsValue(char2)&&map.containsKey(char1)==false){
+            }else if(map.containsValue(char2)&& !map.containsKey(char1)){
                 return false;
             }
             map.put(char1,char2);
