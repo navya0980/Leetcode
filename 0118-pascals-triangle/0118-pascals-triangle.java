@@ -1,23 +1,22 @@
 class Solution {
     public List<List<Integer>> generate(int numRows) {
-       int i=0;
+      
        List<List<Integer>> list=new ArrayList<>();
-       while(i<numRows){
-        int j=0;
-         list.add(new ArrayList<>());
-        while(j<=i){
-           if(j==0||j==i){
-             list.get(i).add(1);
-           }else{
+       for(int i=0;i<numRows;i++){
+        int n=i+1;
+        list.add(new ArrayList<Integer>());
+        int ans=1;
+            list.get(i).add(ans);
+        for(int j=1;j<=i;j++){
+            ans=ans*(n-j);
+            ans=ans/j;
+            list.get(i).add(ans);
+
             
-            list.get(i).add(list.get(i-1).get(j-1)+list.get(i-1).get(j));
-           }
-           j++;
-           
         }
-        i++;
 
        }
+       
       return list;  
     }
 }
