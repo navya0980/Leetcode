@@ -75,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0162-find-peak-element](https://github.com/navya0980/Leetcode/tree/master/0162-find-peak-element) |
 | [0169-majority-element](https://github.com/navya0980/Leetcode/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/navya0980/Leetcode/tree/master/0189-rotate-array) |
+| [0229-majority-element-ii](https://github.com/navya0980/Leetcode/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
 | [0283-move-zeroes](https://github.com/navya0980/Leetcode/tree/master/0283-move-zeroes) |
 | [0410-split-array-largest-sum](https://github.com/navya0980/Leetcode/tree/master/0410-split-array-largest-sum) |
@@ -137,6 +138,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0073-set-matrix-zeroes](https://github.com/navya0980/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0169-majority-element](https://github.com/navya0980/Leetcode/tree/master/0169-majority-element) |
 | [0205-isomorphic-strings](https://github.com/navya0980/Leetcode/tree/master/0205-isomorphic-strings) |
+| [0229-majority-element-ii](https://github.com/navya0980/Leetcode/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
 | [0560-subarray-sum-equals-k](https://github.com/navya0980/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [2406-decode-the-message](https://github.com/navya0980/Leetcode/tree/master/2406-decode-the-message) |
@@ -150,6 +152,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0075-sort-colors](https://github.com/navya0980/Leetcode/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/navya0980/Leetcode/tree/master/0169-majority-element) |
+| [0229-majority-element-ii](https://github.com/navya0980/Leetcode/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
 ## Divide and Conquer
 |  |
@@ -160,6 +163,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/navya0980/Leetcode/tree/master/0169-majority-element) |
+| [0229-majority-element-ii](https://github.com/navya0980/Leetcode/tree/master/0229-majority-element-ii) |
 ## Simulation
 |  |
 | ------- |
