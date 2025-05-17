@@ -2,28 +2,33 @@ class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         int n=nums.length;
         List<List<Integer>> list=new ArrayList<>();
+        Arrays.sort(nums);
         for(int i=0;i<n;i++){
-            for(int j=i+1;j<n;j++){
-                Set<Long>st=new HashSet<>();
-                for(int k=j+1;k<n;k++){
-                   long sum=nums[i]+nums[j];
-                   sum+=nums[k];
-                   long rem=target-sum;
-                   if(st.contains(rem)){
-                   List<Integer> temp = new ArrayList<>();
-                        temp.add(nums[i]);
-                        temp.add(nums[j]);
-                        temp.add(nums[k]);
-                    temp.add((int)rem);
-                      Collections.sort(temp);
-                      if(!list.contains(temp)){
-                        list.add(temp);
-                      }
-                   }
-                  
-                    st.add((long)nums[k]);
-                
+             if(i!=0&&nums[i]==nums[i-1]){
+                    continue;
                 }
+            for(int j=i+1;j<n;j++){
+                if(j>i+1&&nums[j]==nums[j-1]){
+                    continue;
+                }
+               int k=j+1;
+               int l=n-1;
+               while(k<l){
+                long sum=nums[i]+nums[j];
+                sum+=nums[k]+nums[l];
+                if(sum<target){
+                   k++;
+                }else if(sum>target){
+                    l--;
+                }else{
+                     List<Integer>temp=Arrays.asList(nums[i],nums[j],nums[k],nums[l]);
+                   list.add(temp);
+                   k++;
+                   l--;
+                   while(k<l&&nums[k]==nums[k-1])k++;
+                   while(k<l&&nums[l]==nums[l+1])l--;
+                }
+               }
             }
         }
         return list;
