@@ -1,6 +1,6 @@
 class Solution {
     public String removeOuterParentheses(String s) {
-        StringBuilder ans=new StringBuilder();
+       String ans="";
         int c=0;
         int first=1;
         for(int i=0;i<s.length();i++){
@@ -11,11 +11,11 @@ class Solution {
                 c--;
             }
             if(c==0){
-                String temp=s.substring(first,i);
-                ans.append(temp);
+               ans+=s.substring(first,i);
+               
                 first=i+2;
             }
         }
-        return ans.toString();
+        return ans;
     }
 }
