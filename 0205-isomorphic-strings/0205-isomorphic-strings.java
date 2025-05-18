@@ -1,8 +1,8 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
 
-      int[] map1=new int[200];
-      int[] map2=new int[200];
+      int[] map1=new int[256];
+      int[] map2=new int[256];
 
       if(s.length()!=t.length())
       return false;
