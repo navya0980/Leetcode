@@ -1,18 +1,18 @@
 class Solution {
     public String reverseWords(String s) {
-        s=s.replaceAll("\\s+", " ").trim();
+        s=s.replaceAll("\\s{2,}"," ").trim();
+        int start=0;
+        int end=s.length();
         StringBuilder ans=new StringBuilder();
-        int lastIndex=s.length();
-        int i=0;
-        for( i=s.length()-1;i>=0;i--){
+        for(int i=s.length()-1;i>=0;i--){
             if(s.charAt(i)==' '){
-                ans.append(s.substring(i+1,lastIndex)+" ");
-                lastIndex=i;
-
+                String temp=s.substring(i+1,end);
+                ans.append(temp+" ");
+                end=i;
             }
         }
-         ans.append(s.substring(i+1,lastIndex));
-
-       return ans.toString(); 
+        ans.append(s.substring(start,end));
+        return ans.toString();
+        
     }
 }
