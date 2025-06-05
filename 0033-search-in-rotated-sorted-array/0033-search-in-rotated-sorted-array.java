@@ -1,42 +1,30 @@
 class Solution {
-    public int search(int[] nums, int target) {
-        int start=0;
-        int end=nums.length-1;
-        int peak=findPeak(nums,start,end);
-        if(peak==-1){
-          return  bs(nums,start,end,target);
-        }
-        if(target>=nums[0]){
-            return bs(nums,start,peak,target);
-        }else{
-             return bs(nums,peak+1,end,target);
-        }
-    }
-    public static int findPeak(int[] nums,int start,int end){
-        while(start<=end){
-            int mid=start+(end-start)/2;
-            if(nums[mid]>=nums[0]){
-                if(mid<nums.length-1&&nums[mid]>nums[mid+1]){
-                      return mid;
-                }else{
-                  start=mid+1;
-                }
-                
-            }else {
-                end=mid-1;
-            }
-        }
-        return -1;
-    }
-    public static int bs(int[] nums,int start,int end,int target){
-        while(start<=end){
-            int mid=start+(end-start)/2;
-            if(nums[mid]==target){
+    public int search(int[] arr, int k) {
+        int low = 0, high = arr.length - 1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+
+            // if mid points to the target
+            if (arr[mid] == k)
                 return mid;
-            }else if(nums[mid]>target){
-                end=mid-1;
-            }else{
-                start=mid+1;
+
+            // if left part is sorted
+            if (arr[low]  <= arr[mid]) {
+                if (arr[low] <= k && k <= arr[mid]) {
+                    // element exists
+                    high = mid - 1;
+                } else {
+                    // element does not exist
+                    low = mid + 1;
+                }
+            } else { // if right part is sorted
+                if (arr[mid] <= k && k <= arr[high]) {
+                    // element exists
+                    low = mid + 1;
+                } else {
+                    // element does not exist
+                    high = mid - 1;
+                }
             }
         }
         return -1;
