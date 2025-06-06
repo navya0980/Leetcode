@@ -37,7 +37,7 @@ class Solution {
                 //skip end
                 e--;
             }
-            else if(nums[m]>=nums[s]&&nums[m]>nums[e]){
+            else if(nums[m]>=nums[s]){
                 s=m+1;
             }else {
                 e=m-1;
