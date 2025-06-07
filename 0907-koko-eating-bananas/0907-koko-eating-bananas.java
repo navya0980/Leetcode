@@ -3,8 +3,10 @@ class Solution {
     private int check(int[] piles, int h, int mid) {
         int ans = 0;
         for (int pile : piles) {
-            ans += Math.ceil((double)pile / (double)mid);
-            
+            ans += pile / mid;
+            if (pile % mid != 0) {
+                ans++;
+            }
         }
         return ans <= h ? 1 : 0;
     }
