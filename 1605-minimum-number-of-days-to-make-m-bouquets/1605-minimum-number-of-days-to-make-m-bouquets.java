@@ -31,9 +31,6 @@ class Solution {
             }
         }
         noOf+=c/k;
-       if(noOf>=m)
-        return true;
-    else
-     return false;
+       return noOf>=m;
     }
 }
