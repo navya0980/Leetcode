@@ -1,37 +1,26 @@
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-        int low = 1, high = findMax(piles);
-
-        //apply binary search:
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            int totalH = calculateTotalHours(piles, mid);
-            if (totalH <= h) {
-                high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
+        int max=0;
+       for(int i=0;i<piles.length;i++){
+         max=Math.max(max,piles[i]);
+       }
+      int start=1;
+      int end=max;
+     
+      while(start<=end){
+        int mid=start+(end-start)/2;
+        int hrs=0;
+        for(int i=0;i<piles.length;i++){
+              hrs+=Math.ceil((double)piles[i]/(double)mid);
         }
-        return low;
-    }
-    public static int findMax(int[] v) {
-        int maxi = Integer.MIN_VALUE;;
-        int n = v.length;
-        //find the maximum:
-        for (int i = 0; i < n; i++) {
-            maxi = Math.max(maxi, v[i]);
+        if(hrs<=h){
+             end=mid-1;
+           
+        }else{
+           start=mid+1;
+           
         }
-        return maxi;
+      }
+      return start;
     }
-
-    public static int calculateTotalHours(int[] v, int hourly) {
-        int totalH = 0;
-        int n = v.length;
-        //find total hours:
-        for (int i = 0; i < n; i++) {
-            totalH += Math.ceil((double)(v[i]) / (double)(hourly));
-        }
-        return totalH;
-    }
-
 }
