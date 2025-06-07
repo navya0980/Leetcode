@@ -1,36 +1,42 @@
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
-        if(bloomDay.length<(long)m*k){
+        if (bloomDay.length < m * k) {
             return -1;
         }
-        int min=0;
-        int start=Arrays.stream(bloomDay).min().getAsInt();
-        int end=Arrays.stream(bloomDay).max().getAsInt();
-        while(start<=end){
-            int mid=start+(end-start)/2;
-            if(possible(bloomDay,mid,m,k)){
-                min=mid;
-                end=mid-1;
-            }else{
-                start=mid+1;
-            }
+        int low = 1, high = 1, n = bloomDay.length, ans = -1;
+        if (m > (n / k)) {
+            return -1;
         }
-        return min;
-        
-    }
-    public static boolean possible(int[] arr,int day,int m,int k){
-        int c=0;
-        int noOf=0;
-        for(int n:arr){
-            if(n<=day){
-                c++;
-            }else{
-                noOf+=c/k;
-                c=0;
+        for (int i = 0; i < bloomDay.length; i++) {
+            high = Math.max(high, bloomDay[i]);
+        }
 
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (canHappen(mid, bloomDay, m, k)) {
+                ans = mid;
+                high = mid - 1;
+            } else {
+                low = mid + 1;
             }
         }
-        noOf+=c/k;
-       return noOf>=m;
+
+        return ans;
     }
-}
+
+    private boolean canHappen(int days, int[] bloomDay, int m, int k) {
+        int K = 0, bouquets = 0;
+        for (int i = 0; i < bloomDay.length; i++) {
+            if (bloomDay[i] <= days) {
+                K++;
+                if (K == k) {
+                    bouquets++;
+                    K = 0;
+                }
+            } else {
+                K = 0;
+            }
+        }
+        return bouquets >= m;
+    }
+};
