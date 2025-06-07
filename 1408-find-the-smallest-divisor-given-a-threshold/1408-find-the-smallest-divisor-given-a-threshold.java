@@ -1,8 +1,6 @@
 class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
-        int start=1;
-        int end=Arrays.stream(nums).max().getAsInt();
-        int smallestInt=0;
+        int start=1,end=Arrays.stream(nums).max().getAsInt(),smallestInt=0;
         while(start<=end){
             int mid=start+(end-start)/2;
             if(findSum(nums,mid)>threshold){
