@@ -1,19 +1,25 @@
 class Solution {
     public boolean check(int[] nums) {
+        int sorted=0;
         int rotated=0;
         for(int i=0;i<nums.length-1;i++){
-            if(nums[i]<=nums[i+1]){
-                continue;
-
-            }else {
-                rotated++;
+           if(nums[i]>nums[i+1]){
+            rotated++;
+           }
+           if(rotated==2){
+            return false;
+           }
+            
+        }
+        if(rotated==1){
+            if(nums[0]<nums[nums.length-1]){
+                return false;
+            }
+            else{
+                return true;
             }
         }
-        if(rotated==1&&nums[0]>=nums[nums.length-1]||rotated==0){
-            return true;
-        }else if(rotated>=2){
-            return false;
-        }
-      return false;  
+        return rotated==0;
+       
     }
 }
