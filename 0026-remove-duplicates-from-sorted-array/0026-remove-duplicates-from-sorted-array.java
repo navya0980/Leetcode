@@ -5,10 +5,8 @@ class Solution {
       while(j<nums.length){
         if(nums[j]!=nums[i]){
             nums[i+1]=nums[j];
-            j++;i++;
-        }else{
-            j++;
-        }
+            i++;
+        }j++;
       }
       return i+1;
     }
