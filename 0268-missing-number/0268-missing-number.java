@@ -1,16 +1,19 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int n=nums.length;
-        int XOR1=0;
-        int XOR2=0;
-    
-       for(int i=0;i<=n;i++){
-        XOR1^=i;
-       
-       }
-       for(int i=0;i<n;i++){
-        XOR2^=nums[i];
-       }
-       return XOR1^XOR2;
+        int max=Arrays.stream(nums).max().getAsInt();
+        
+        for(int i=0;i<=max;i++){
+            int count=0;
+            for(int n:nums){
+                if(i==n){
+                    count=1;
+                    break;
+                }
+            }
+            if(count==0){
+                return i;
+            }
+        }
+        return max+1;
     }
 }
