@@ -14,19 +14,10 @@ class Solution {
         ListNode prev=null;
         ListNode front=null;
         while(temp!=null){
-              front=temp.next;
-             
-             if(temp==head){
-               
-                temp.next=null;
-                prev=temp;
-
-             }else{
-                temp.next=prev;
-                prev=temp;
-
-             }
-             temp=front;
+           front=temp.next;
+           temp.next=prev;
+           prev=temp;
+           temp=front;   
         }
        head=prev;
        
