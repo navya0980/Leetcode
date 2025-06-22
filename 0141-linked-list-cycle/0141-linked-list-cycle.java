@@ -11,15 +11,17 @@
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        ListNode temp=head;
-        Map<ListNode,Integer>nodeMap=new HashMap<>();
-        while(temp!=null){
-            if(nodeMap.containsKey(temp))
-              return true;
-            
-            nodeMap.put(temp,1);
-            temp=temp.next;
+        ListNode fast=head;
+        ListNode slow=head;
+
+       while(fast!=null&&fast.next!=null){
+        
+         fast=fast.next.next;
+         slow=slow.next;
+         if(fast==slow){
+            return true;
         }
-        return false;
+       }
+       return false;
     }
 }
