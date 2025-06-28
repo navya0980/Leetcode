@@ -10,20 +10,61 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
-      ArrayList<Integer>list=new ArrayList<>();
-      ListNode temp=head;
-      while(temp!=null){
-        list.add(temp.val);
-        temp=temp.next;
-      }  
-      Collections.sort(list);
-      temp=head;
-      int index=0;
-      while(temp!=null){
-        temp.val=list.get(index);
-        temp=temp.next;
-        index++;
-      }
-      return head;
+        ListNode temp=head,tail=null;
+        while(temp!=null){
+           tail=temp;
+           temp=temp.next;
+        }
+      return Sort(head); 
+    }
+    public static ListNode Sort(ListNode head){
+        if(head==null||head.next==null){
+            return head;
+        }
+        ListNode slow=head;
+        ListNode fast=head;
+        while(fast.next!=null&&fast.next.next!=null){
+            fast=fast.next.next;
+            slow=slow.next;
+        }
+        ListNode h=slow.next;
+        slow.next=null;
+      head=  Sort(head);
+      h=  Sort(h);
+      return  merge(head,h);
+    }
+    public static ListNode merge(ListNode head,ListNode h){
+        
+        ListNode left=head;
+        ListNode right=h;
+        ListNode newHead=new ListNode();
+        ListNode temp=newHead;
+        while(left!=null&&right!=null){
+            if(left.val<=right.val){
+               
+                  temp.next=left;
+                 
+                  left=left.next;
+                
+            }else{
+                
+                  temp.next=right;
+                 
+                  right=right.next;
+            }
+            temp=temp.next;
+        }
+       if(left!=null){
+         temp.next=left;
+                 
+                 
+               
+       }else{
+              temp.next=right;
+                 
+                  
+                  
+       }
+        return newHead.next;
     }
 }
