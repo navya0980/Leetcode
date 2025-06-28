@@ -10,11 +10,7 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
-        ListNode temp=head,tail=null;
-        while(temp!=null){
-           tail=temp;
-           temp=temp.next;
-        }
+        
       return Sort(head); 
     }
     public static ListNode Sort(ListNode head){
