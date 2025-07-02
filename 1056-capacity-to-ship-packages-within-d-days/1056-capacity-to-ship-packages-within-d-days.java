@@ -1,39 +1,41 @@
 class Solution {
     public int shipWithinDays(int[] weights, int days) {
-       int start=Arrays.stream(weights).max().getAsInt();
-       int end=Arrays.stream(weights).sum();
-       int min=0;
-       while(start<=end){
-        int mid=start+(end-start)/2;
-        int d=complete(weights,mid);
-        if(d>days){
-            start=mid+1;
-        }else if(d<days){
-            end=mid-1;
-        }else{
-           min=mid;
-           end=mid-1;
+        int low=Arrays.stream(weights).max().getAsInt();
+        int high=Arrays.stream(weights).sum();
+       
+        int min=0;
+        while(low<=high){
+            int mid=low+(high-low)/2;
+           int d=capacity(weights,mid);
+           if(d<days){
+            high=mid-1;
+           }else if(d>days){
+            low=mid+1;
+           }else{
+            min=mid;
+            high=mid-1;
+           }
+
         }
-       }
-       if(min==0){
-        return start;
-       }
-       return min;
+        if(min==0){
+            return low;
+        }
+        return min;
+
     }
-    public static int complete(int[] arr,int c){
-        int d=1;
+    public static int capacity(int[] arr,int min){
         int sum=0;
-        for(int n:arr){
-            if(sum+n<=c){
-                sum+=n;
+        int d=1;
+        for(int i=0;i<arr.length;i++){
+            if(sum+arr[i]<=min){
+                sum+=arr[i];
             }else{
-                d++;
-                sum=n;
-                
+                sum=arr[i];
+                 d++;
             }
            
+           
         }
-        
         return d;
     }
 }
