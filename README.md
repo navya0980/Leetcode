@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1013-fibonacci-number](https://github.com/navya0980/Leetcode/tree/master/1013-fibonacci-number) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/navya0980/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [2032-largest-odd-number-in-string](https://github.com/navya0980/Leetcode/tree/master/2032-largest-odd-number-in-string) |
+| [3227-find-missing-and-repeated-values](https://github.com/navya0980/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
 ## Two Pointers
 |  |
 | ------- |
@@ -123,6 +124,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2271-rearrange-array-elements-by-sign](https://github.com/navya0980/Leetcode/tree/master/2271-rearrange-array-elements-by-sign) |
 | [2714-left-and-right-sum-differences](https://github.com/navya0980/Leetcode/tree/master/2714-left-and-right-sum-differences) |
 | [3194-find-words-containing-character](https://github.com/navya0980/Leetcode/tree/master/3194-find-words-containing-character) |
+| [3227-find-missing-and-repeated-values](https://github.com/navya0980/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
 ## Binary Search
 |  |
 | ------- |
@@ -167,6 +169,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0240-search-a-2d-matrix-ii](https://github.com/navya0980/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [1791-richest-customer-wealth](https://github.com/navya0980/Leetcode/tree/master/1791-richest-customer-wealth) |
 | [2047-find-a-peak-element-ii](https://github.com/navya0980/Leetcode/tree/master/2047-find-a-peak-element-ii) |
+| [3227-find-missing-and-repeated-values](https://github.com/navya0980/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
 ## Greedy
 |  |
 | ------- |
@@ -194,6 +197,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
 | [0560-subarray-sum-equals-k](https://github.com/navya0980/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [2406-decode-the-message](https://github.com/navya0980/Leetcode/tree/master/2406-decode-the-message) |
+| [3227-find-missing-and-repeated-values](https://github.com/navya0980/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
 ## Bit Manipulation
 |  |
 | ------- |
