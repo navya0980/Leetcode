@@ -2,28 +2,22 @@ class Solution {
     public int[] findMissingAndRepeatedValues(int[][] grid) {
         int n=grid.length;
          int ans[]=new int[2];
+        
         int range=(int)Math.pow(n,2);
-        for(int i=1;i<=range;i++){
-            int num=i;
-            int count=0;
-            
-          for(int k=0;k<n;k++){
+         int[] hash=new int[range+1];
+       for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
-              if(num==grid[k][j]){
-                    count++;
-                  
-              }
-               
-                
+               hash[grid[i][j]]++;
             }
         }
-        if(count==2){
-            ans[0]=num;
+        for(int i=1;i<hash.length;i++){
+            if(hash[i]==2){
+                ans[0]=i;
+            }
+            if(hash[i]==0){
+                ans[1]=i;
+            }
         }
-        if(count==0)
-         ans[1]=num;
-        }
-       
         
        
         return ans;
