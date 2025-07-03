@@ -4,10 +4,10 @@ class Solution {
         int el=0;
         for(int i=0;i<nums.length;i++){
             if(c==0){
-                el=nums[i];
-                c=1;
-
-            }else if(nums[i]==el){
+                 el=nums[i];
+                
+            }
+            if(nums[i]==el){
                 c++;
             }else{
                 c--;
