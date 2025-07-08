@@ -4,13 +4,12 @@ class Solution {
         int n=0;
         while(n<numRows){
             List<Integer>temp=new ArrayList<>();
-            for(int i=0;i<=n;i++){
-                if(i==0||i==n){
-                    temp.add(1);
-                }else{
-                    int val=list.get(n-1).get(i-1)+list.get(n-1).get(i);
-                    temp.add(val);
-                }
+            temp.add(1);
+            int res=1;
+            for(int i=1;i<=n;i++){
+               res=res*(n-i+1);
+               res/=i;
+               temp.add(res);
             }
             list.add(temp);
             n++;
