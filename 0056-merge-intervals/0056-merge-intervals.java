@@ -12,18 +12,19 @@ class Solution {
             int a=intervals[i][0];
             int b=intervals[i][1];
            
-            int j=i+1;
-            while(j<n&&intervals[j][0]<=b){
-                if(intervals[j][1]>=b)
-                   b=intervals[j][1];
-                
-               j++;
+            if(list.isEmpty()){
+                list.add(a);
+                list.add(b);
+                continue;
             }
-            list.add(a);
-            list.add(b);
-            i=j;
-           
-
+            if(a<=list.get(list.size()-1)){
+                list.set(list.size()-1,Math.max(list.get(list.size()-1),b));
+            }
+            else{
+                list.add(a);
+                list.add(b);
+            }
+            i++;
 
         }
         int[][] merge=new int[list.size()/2][2];
