@@ -14,8 +14,8 @@ class Solution {
            
             int j=i+1;
             while(j<n&&intervals[j][0]<=b){
-                
-                   b=Math.max(intervals[j][1],b);
+                if(intervals[j][1]>=b)
+                   b=intervals[j][1];
                 
                j++;
             }
