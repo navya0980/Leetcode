@@ -1,71 +1,63 @@
 class Solution {
     public int reversePairs(int[] nums) {
-     int n=nums.length;
-     return mergeSort(nums,0,n-1);   
+        
+   int n=nums.length;
+      return mergesort(nums,0,n-1);
     }
+    public static int mergesort(int[] a,int start,int end){
+        int c=0;
+        if(start>=end)
+          return c;
+        int mid=start+(end-start)/2;
 
-     private static void merge(int[] arr, int low, int mid, int high) {
-        ArrayList<Integer> temp = new ArrayList<>(); // temporary array
-        int left = low;      // starting index of left half of arr
-        int right = mid + 1;   // starting index of right half of arr
+        c+=mergesort(a,start,mid);
+        c+=mergesort(a,mid+1,end);
+        c+=count(a,start,mid,end);
+        merge(a,start,mid,end);
+        return c;
+    }
+    public static int count(int[] arr,int start,int mid,int end){
+        int c=0;
+        int left=start;
+        int right=mid+1;
+        while(left<=mid){
+            while(right<=end&&(long)arr[left]>2*(long)arr[right]){
+                right++;  
+               
+            }
+            c+=(right-(mid+1));
+            
+            left++;
 
-        //storing elements in the temporary array in a sorted manner//
-
-        while (left <= mid && right <= high) {
-            if ((long)arr[left] <= (long)arr[right]) {
-                temp.add(arr[left]);
-                left++;
-            } else {
-                temp.add(arr[right]);
-                right++;
+        }
+        return c;
+    }
+    public static void merge(int[] a,int s,int m,int e){
+        ArrayList<Integer>list=new ArrayList<>();
+       
+        int low=s;
+        int high=m+1;
+        while(low<=m&&high<=e){
+            if((long)a[low]<=(long)a[high]){
+                list.add(a[low]);
+                low++;
+            }else{
+                list.add(a[high]);
+                high++;
             }
         }
-
-        // if elements on the left half are still left //
-
-        while (left <= mid) {
-            temp.add(arr[left]);
-            left++;
+        while(low<=m){
+            list.add(a[low]);
+            low++;
         }
-
-        //  if elements on the right half are still left //
-        while (right <= high) {
-            temp.add(arr[right]);
-            right++;
+        while(high<=e){
+            list.add(a[high]);
+            high++;
         }
-
-        // transfering all elements from temporary to arr //
-        for (int i = low; i <= high; i++) {
-            arr[i] = temp.get(i - low);
+        for(int i=s;i<=e;i++){
+            a[i]=list.get(i-s);
         }
-    }
-
-    public static int countPairs(int[] arr, int low, int mid, int high) {
-        int right = mid + 1;
-        int cnt = 0;
-        for (int i = low; i <= mid; i++) {
-            while (right <= high && (long)arr[i] > 2 *(long) arr[right]) right++;
-            cnt += (right - (mid + 1));
-        }
-        return cnt;
-    }
-
-    public static int mergeSort(int[] arr, int low, int high) {
-        int cnt = 0;
-        if (low >= high) return cnt;
-        int mid = (low + high) / 2 ;
-        cnt += mergeSort(arr, low, mid);  // left half
-        cnt += mergeSort(arr, mid + 1, high); // right half
-        cnt += countPairs(arr, low, mid, high); //Modification
-        merge(arr, low, mid, high);  // merging sorted halves
-        return cnt;
+        
+       
     }
 }
-
-
-
-
-
-   
-
-   
