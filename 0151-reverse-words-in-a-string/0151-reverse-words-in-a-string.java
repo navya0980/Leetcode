@@ -18,11 +18,11 @@ class Solution {
         }
         
         
-           if (start > 0) {
+           if (start >= 0) {
                 ans[index++] = ' ';
             }
 
-            end = start - 1; 
+            end = start;
       
        
        } 
