@@ -1,28 +1,32 @@
 class Solution {
     public String reverseWords(String s) {
-        char[] st = s.toCharArray();
-        char[] arr = new char[st.length];
-        int index = reverse(st, arr, 0);
-        return new String(arr, 0, index);
-    }
-    private int reverse(char[] st, char[] arr, int start){
-        while(start < st.length && st[start] == ' '){
-            start++;
+       char ch[]=s.toCharArray();
+       char ans[]=new char[ch.length];
+       int index=0;
+       int end=ch.length-1;
+       int start=end;
+       while(start>=0&&end>=0){
+        
+        while (end >= 0 && ch[end] == ' ') end--;
+
+            if (end < 0) break;
+        start=end;
+        while(start>=0&&ch[start]!=' ')start--;
+        for(int i=start+1;i<=end;i++){
+            ans[index++]=ch[i];
+            
         }
-        int end = start;
-        while(end < st.length && st[end] != ' '){
-            end++;
-        }
-        if(start == end){
-            return 0;
-        }
-        int reverseLen = reverse(st, arr, end);
-        if(reverseLen != 0){
-            arr[reverseLen++] = ' ';
-        }
-        while(start < end){
-            arr[reverseLen++] = st[start++];
-        }
-        return reverseLen;
+        
+        
+           if (start > 0) {
+                ans[index++] = ' ';
+            }
+
+            end = start - 1; 
+      
+       
+       } 
+       if(index>0&&ans[index-1]==' ')index--;
+       return new String(ans,0,index);
     }
 }
