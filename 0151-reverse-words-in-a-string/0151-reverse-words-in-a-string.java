@@ -23,7 +23,7 @@ class Solution {
 
         end=start;
        } 
-       if(ans[index-1]==' '){
+       if(index>0&&ans[index-1]==' '){
         index--;
        }
 
