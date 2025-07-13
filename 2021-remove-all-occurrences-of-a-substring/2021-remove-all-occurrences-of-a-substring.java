@@ -1,22 +1,23 @@
 class Solution {
     public String removeOccurrences(String s, String part) {
-        StringBuilder str=new StringBuilder(s);
-        int i=0;
-        while(i<str.length()){
-            int j=0;
-            int k=i;
-            while(k<str.length()&&j<part.length()&&str.charAt(k)==part.charAt(j)){
-                k++;
-                j++;
-
+        char[] input=s.toCharArray();
+        char[] target=part.toCharArray();
+        char[] result=new char[input.length];
+        int size=0,targetLength=target.length;
+        char targetChar=target[targetLength-1];
+       for(char currChar:input ){
+        result[size++]=currChar;
+        if(currChar==targetChar&&size>=targetLength){
+            int i=size-1;
+            int j=targetLength-1;
+            while(j>=0&&result[i]==target[j]){
+                i--;j--;
             }
-            if(j==part.length()){
-                str.replace(i,k,"");
-                i=0;
-            }else{
-                i++;
+            if(j<0){
+                size=i+1;
             }
         }
-        return str.toString();
+       }
+       return new String(result,0,size);
     }
 }
