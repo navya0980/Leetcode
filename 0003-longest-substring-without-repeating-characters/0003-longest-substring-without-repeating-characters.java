@@ -1,21 +1,22 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
+        StringBuilder str=new StringBuilder("");
+        int c=0;
         int max=0;
         for(int i=0;i<s.length();i++){
-            StringBuilder str=new StringBuilder("");
-            int len=0;
-            for(int j=i;j<s.length();j++){
-                Character ch=s.charAt(j);
-                if(str.indexOf(ch.toString())!=-1){
-                  
-                  break;
+            Character ch=s.charAt(i);
+            if(str.indexOf(ch.toString())==-1){
+                str.append(ch);
+                c++;
+            }else{
+                while(str.indexOf(ch.toString())!=-1){
+                    str.deleteCharAt(0);
+                    c--;
                 }
                 str.append(ch);
-                len=j-i+1;
-                max=Math.max(len,max);
-
+                c++;
             }
-
+            max=Math.max(c,max);
         }
         return max;
     }
