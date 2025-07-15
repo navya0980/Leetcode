@@ -4,22 +4,22 @@ class Solution {
         if(s.length()==0){
             return null;
         }
-        int c=0;
+        int count=0;
         char[] ch=s.toCharArray();
-        for(int i=0;i<ch.length;i++){
-            if(ch[i]=='('){
-                if(c>0){
-                str.append(ch[i]);
+        for(char c:ch){
+            if(c=='('){
+                if(count>0){
+                    str.append(c);
+
+                }
+                count++;
             }
-                c++;
-            }
-            if(ch[i]==')'){
-                c--;
-                if(c>0){
-                     str.append(ch[i]);
+            if(c==')'){
+                count--;
+                if(count>0){
+                    str.append(c);
                 }
             }
-            
         }
         return str.toString();
     }
