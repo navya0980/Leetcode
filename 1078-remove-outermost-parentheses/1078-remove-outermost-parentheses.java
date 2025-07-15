@@ -5,16 +5,21 @@ class Solution {
             return null;
         }
         int c=0;
-        int j=1;
-        for(int i=0;i<s.length();i++){
-
-            Character ch=s.charAt(i);
-            if(ch=='(')c++;
-            if(ch==')')c--;
-            if(c==0){
-               str.append(s.substring(j,i));
-               j=i+2;
+        char[] ch=s.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            if(ch[i]=='('){
+                if(c>0){
+                str.append(ch[i]);
             }
+                c++;
+            }
+            if(ch[i]==')'){
+                c--;
+                if(c>0){
+                     str.append(ch[i]);
+                }
+            }
+            
         }
         return str.toString();
     }
