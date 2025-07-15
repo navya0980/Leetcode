@@ -1,9 +1,7 @@
 class Solution {
     public String removeOuterParentheses(String s) {
         StringBuilder str=new StringBuilder();
-        if(s.length()==0){
-            return null;
-        }
+        
         int count=0;
         char[] ch=s.toCharArray();
         for(char c:ch){
