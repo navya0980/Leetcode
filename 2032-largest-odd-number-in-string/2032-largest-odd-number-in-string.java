@@ -1,15 +1,11 @@
 class Solution {
     public String largestOddNumber(String num) {
-        String ans="";
-        int i=num.length()-1;
-        while(i>=0){
-            int n=(int)num.charAt(i);
+        for(int i=num.length()-1;i>=0;i--){
+            int n=Integer.parseInt(num.charAt(i)+"");
             if(n%2!=0){
-                ans=num.substring(0,i+1);
-                break;
+                return num.substring(0,i+1);
             }
-            i--;
         }
-       return ans; 
+        return "";
     }
 }
