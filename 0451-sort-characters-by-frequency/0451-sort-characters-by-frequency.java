@@ -11,12 +11,7 @@ class Solution {
         for(Map.Entry<Integer,Integer> mp:map.entrySet()){
             list.add(new ArrayList<>(Arrays.asList(mp.getValue(),mp.getKey())));
         }
-        Collections.sort(list, new Comparator<ArrayList<Integer>>() {    
-        @Override
-        public int compare(ArrayList<Integer> o1, ArrayList<Integer> o2) {
-            return o1.get(0).compareTo(o2.get(0));
-        }               
-});
+        list.sort((l1,l2)->l1.get(0).compareTo(l2.get(0)));
         StringBuilder str=new StringBuilder();
         for(int i=list.size()-1;i>=0;i--){
             int n=list.get(i).get(0);
