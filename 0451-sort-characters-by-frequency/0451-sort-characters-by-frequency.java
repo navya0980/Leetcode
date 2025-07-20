@@ -1,32 +1,24 @@
-
 class Solution {
     public String frequencySort(String s) {
-        Map<Character, Integer> mp = new HashMap<>();
-        TreeMap<Integer, List<Character>> r = new TreeMap<>(Collections.reverseOrder());
-        StringBuilder ss = new StringBuilder();
+        Map<Character, Integer> freqMap = new HashMap<>();
+        for (char c : s.toCharArray())
+            freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
 
-        for (char a : s.toCharArray())
-            mp.put(a, mp.getOrDefault(a, 0) + 1);
+        // Step 2: Use max heap (PriorityQueue) to sort by frequency
+        PriorityQueue<Character> maxHeap = new PriorityQueue<>(
+            (a, b) -> freqMap.get(b) - freqMap.get(a)
+        );
+        maxHeap.addAll(freqMap.keySet());
 
-        for (Map.Entry<Character, Integer> entry : mp.entrySet()) {
-            if (!r.containsKey(entry.getValue())) {
-                r.put(entry.getValue(), new ArrayList<>());
-            }
-            r.get(entry.getValue()).add(entry.getKey());
+        // Step 3: Build result string
+        StringBuilder result = new StringBuilder();
+        while (!maxHeap.isEmpty()) {
+            char c = maxHeap.poll();
+            int freq = freqMap.get(c);
+            for (int i = 0; i < freq; i++)
+                result.append(c);
         }
 
-        for (Map.Entry<Integer, List<Character>> entry : r.entrySet()) {
-            int freq = entry.getKey();
-            List<Character> chars = entry.getValue();
-            for (char c : chars) {
-                for (int i = 0; i < freq; i++) {
-                    ss.append(c);
-                }
-            }
-        }
-
-        return ss.toString();
+        return result.toString();
     }
 }
-
-
