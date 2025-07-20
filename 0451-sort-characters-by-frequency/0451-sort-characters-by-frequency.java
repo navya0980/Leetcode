@@ -1,27 +1,26 @@
+
+
 class Solution {
     public String frequencySort(String s) {
-        Map<Integer,Integer> map=new HashMap<>();
-        for(int i=0;i<s.length();i++){
-            int a=(int)s.charAt(i);
-            int val=map.getOrDefault(a,0);
-            map.put(a,++val);
+        Map<Character, Integer> hm = new HashMap<>();
+        
+        for (char c : s.toCharArray()) {
+            hm.put(c, hm.getOrDefault(c, 0) + 1);
         }
-        ArrayList<ArrayList<Integer>> list=new ArrayList<>();
-        int index=0;
-        for(Map.Entry<Integer,Integer> mp:map.entrySet()){
-            list.add(new ArrayList<>(Arrays.asList(mp.getValue(),mp.getKey())));
+        
+        PriorityQueue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>(
+            (a, b) -> b.getValue() - a.getValue()
+        );
+        
+        pq.addAll(hm.entrySet());
+        
+        StringBuilder result = new StringBuilder();
+        while (!pq.isEmpty()) {
+            Map.Entry<Character, Integer> entry = pq.poll();
+            result.append(String.valueOf(entry.getKey()).repeat(entry.getValue()));
         }
-        list.sort((l1,l2)->l1.get(0).compareTo(l2.get(0)));
-        StringBuilder str=new StringBuilder();
-        for(int i=list.size()-1;i>=0;i--){
-            int n=list.get(i).get(0);
-           int m=list.get(i).get(1);
-           char ch=(char)m;
-            while(n!=0){
-                str.append(ch);
-                n--;
-            }
-        }
-        return str.toString();
+        
+        return result.toString();
     }
 }
+
