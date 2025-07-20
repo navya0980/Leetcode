@@ -4,7 +4,7 @@ class Solution {
             return 0;
         }
          int i=0;
-         int mul=1;
+         
          int ans=0;
          boolean minus=false;
          while(i<s.length()&&s.charAt(i)==' '){
@@ -31,8 +31,7 @@ class Solution {
            }
            
             ans=ans*10+n;
-            System.out.println(n);
-            System.out.println(ans);
+            
 
             
             i++;
