@@ -1,25 +1,36 @@
 class Solution {
     public int romanToInt(String s) {
-        HashMap<Character,Integer> mp=new HashMap<>();
-        mp.put('I',1);
-        mp.put('V',5);
-        mp.put('X',10);
-        mp.put('L',50);
-        mp.put('C',100);
-        mp.put('D',500);
-        mp.put('M',1000);
-        int num=0;
-        for(int i=0;i<s.length();){
-            if(i<s.length()-1&&mp.get(s.charAt(i))<mp.get(s.charAt(i+1))){
-                num+=mp.get(s.charAt(i+1))-mp.get(s.charAt(i));
-                i=i+2;
-            }else{
-                num+=mp.get(s.charAt(i));
+        Map<Character,Integer>romanMap=new HashMap<>();
+        romanMap.put('I',1);
+        romanMap.put('V',5);
+        romanMap.put('X',10);
+        romanMap.put('L',50);
+        romanMap.put('C',100);
+        romanMap.put('D',500);
+        romanMap.put('M',1000);
+        int result=0;
+        for(int i=0;i<s.length();i++){
+            char ch1=s.charAt(i);
+           
+            int n1=romanMap.get(ch1);
+            if(i<s.length()-1){
+                  char ch2=s.charAt(i+1);
+                  int n2=romanMap.get(ch2);
+                   if(n1<n2){
+               result+=(n2-n1);
                 i++;
-            }
 
+            }else{
+               result+=n1;
+            }
+            }else{
+                result+=n1;
+            }
+            
+           
         }
-        return num;
+        return result;
+       
         
     }
 }
