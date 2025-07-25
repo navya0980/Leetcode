@@ -1,35 +1,31 @@
 class Solution {
     public String longestPalindrome(String s) {
-       char ch[]=s.toCharArray(); 
-       StringBuilder str=new StringBuilder();
-       int i=0;
-       int j=ch.length-1;
-       while(i<=j){
-       
-        while(j>=0&&ch[j]!=ch[i]){
-            j--;
-        }
-         StringBuilder temp=new StringBuilder(s.substring(i,j+1));
-        if(j>=0&&checkPalindrome(ch,i,j)){
-                 if(temp.length()>str.length()){
-                    str=temp;
-                 }
-                 i++;
-                 j=ch.length-1;
-        }else{
-            j--;
-        }
-       }
-       return str.toString();
-    }
-    public static boolean checkPalindrome(char[] arr,int start,int end){
-        while(start<=end){
-            if(arr[start]!=arr[end]){
-                return false;
+        char ch[]=s.toCharArray();
+        StringBuilder ans=new StringBuilder();
+        for(int i=0;i<ch.length;i++){
+            //odd length strings
+            int left=i,right=i;
+            while(left>=0&&right<ch.length&&ch[left]==ch[right]){
+                StringBuilder temp=new StringBuilder(s.substring(left,right+1));
+                if(temp.length()>ans.length()){
+                    ans=temp;
+                }
+                left--;
+                right++;
             }
-            start++;
-            end--;
+            left=i;
+            right=i+1;
+            while(left>=0&&right<ch.length&&ch[left]==ch[right]){
+                StringBuilder temp=new StringBuilder(s.substring(left,right+1));
+                if(temp.length()>ans.length()){
+                    ans=temp;
+                }
+                left--;
+                right++;
+            }
+
         }
-        return true;
+        return ans.toString();
     }
+
 }
