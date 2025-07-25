@@ -62,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1078-remove-outermost-parentheses](https://github.com/navya0980/Leetcode/tree/master/1078-remove-outermost-parentheses) |
 | [1205-defanging-an-ip-address](https://github.com/navya0980/Leetcode/tree/master/1205-defanging-an-ip-address) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/navya0980/Leetcode/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
+| [1890-sum-of-beauty-of-all-substrings](https://github.com/navya0980/Leetcode/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/navya0980/Leetcode/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2032-largest-odd-number-in-string](https://github.com/navya0980/Leetcode/tree/master/2032-largest-odd-number-in-string) |
 | [2219-maximum-number-of-words-found-in-sentences](https://github.com/navya0980/Leetcode/tree/master/2219-maximum-number-of-words-found-in-sentences) |
@@ -224,6 +225,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
 | [0451-sort-characters-by-frequency](https://github.com/navya0980/Leetcode/tree/master/0451-sort-characters-by-frequency) |
 | [0560-subarray-sum-equals-k](https://github.com/navya0980/Leetcode/tree/master/0560-subarray-sum-equals-k) |
+| [1890-sum-of-beauty-of-all-substrings](https://github.com/navya0980/Leetcode/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2406-decode-the-message](https://github.com/navya0980/Leetcode/tree/master/2406-decode-the-message) |
 | [3227-find-missing-and-repeated-values](https://github.com/navya0980/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
 ## Bit Manipulation
@@ -261,6 +263,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/navya0980/Leetcode/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/navya0980/Leetcode/tree/master/0229-majority-element-ii) |
 | [0451-sort-characters-by-frequency](https://github.com/navya0980/Leetcode/tree/master/0451-sort-characters-by-frequency) |
+| [1890-sum-of-beauty-of-all-substrings](https://github.com/navya0980/Leetcode/tree/master/1890-sum-of-beauty-of-all-substrings) |
 ## Simulation
 |  |
 | ------- |
