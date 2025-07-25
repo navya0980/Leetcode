@@ -1,26 +1,36 @@
 class Solution {
     public int beautySum(String s) {
-        int sum=0;
-        char ch[]=s.toCharArray();
-
-        for(int i=0;i<ch.length;i++){
-           Map<Character,Integer>map=new HashMap<>();
-            for(int j=i;j<ch.length;j++){
-                char c=ch[j];
-                int val=map.getOrDefault(c,0);
-                
-            map.put(c,++val);
-
-            Integer max=Collections.max(map.values());
-            Integer min=Collections.min(map.values());
-             
-            
-
-            sum+=(int)(max-min);
-            
-            }
-           
+        char[] chrs = s.toCharArray();
+        int res = 0;
+        for (int i = 0; i < chrs.length; i++) {
+            res += getSum(chrs, i);
         }
-        return sum;
+        return res;
+    }
+
+    public int getSum(char[] chrs, int i) {
+        int[] counts = new int[26];
+        counts[chrs[i] - 'a']++;
+        int max = 1;
+        int min = 1;
+        int res = 0;
+        for (int j = i + 1; j < chrs.length; j++) {
+            int count = counts[chrs[j] - 'a']++;
+            if (count == max)
+                max++;
+            if (count == 0) {
+                min = 1;
+            } else if (count == min) {
+                min++;
+                for (int k = 0; k < 26; k++) {
+                    if (counts[k] != 0 && counts[k] < min) {
+                        min--;
+                        break;
+                    }
+                }
+            }
+            res += max - min;
+        }
+        return res;
     }
 }
