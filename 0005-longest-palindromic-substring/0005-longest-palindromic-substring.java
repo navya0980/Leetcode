@@ -7,7 +7,7 @@ class Solution {
      for(int i=0;i<n;i++){
         //for odd length strings
         int start=i,end=i;
-        while(start>=0&&end<n&&checkPalindrome(ch,start,end)){
+        while(start>=0&&end<n&&ch[start]==ch[end]){
             start--;
             end++;
         }
@@ -18,7 +18,7 @@ class Solution {
         //for even length strings
         start=i;
         end=i+1;
-        while(start>=0&&end<n&&checkPalindrome(ch,start,end)){
+        while(start>=0&&end<n&&ch[start]==ch[end]){
             start--;
             end++;
         }
@@ -31,13 +31,5 @@ class Solution {
      }
       return s.substring(maxStart,maxEnd); 
     }
-    public static boolean checkPalindrome(char[] ch,int start,int end){
-        while(start<=end){
-            if(ch[start]!=ch[end])
-             return false;
-            start++;
-            end--;
-        }
-        return true;
-    }
+    
 }
