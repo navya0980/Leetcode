@@ -3,13 +3,13 @@ class Solution {
        String prefix=strs[0];
        
         for(String s:strs){
-            StringBuilder str=new StringBuilder();
-           for(int i=0;i<Math.min(prefix.length(),s.length());i++){
+           int i=0;
+           for(;i<Math.min(prefix.length(),s.length());i++){
             if(prefix.charAt(i)!=s.charAt(i))
               break;
-            str.append(s.charAt(i));
+           
            }
-           prefix=str.toString();
+           prefix=s.substring(0,i);
         }
         return prefix;
     }
