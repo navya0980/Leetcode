@@ -1,9 +1,9 @@
 class Solution {
     public String countAndSay(int n) {
-      return count(n-1);
+      return count(n);
     }
     public static String count(int n){
-         if(n==0){   //base case
+         if(n==1){   //base case
         return "1";
        } 
        String s=count(n-1);
