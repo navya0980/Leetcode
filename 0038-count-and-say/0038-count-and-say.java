@@ -3,7 +3,7 @@ class Solution {
       return count(n-1);
     }
     public static String count(int n){
-         if(n==0){
+         if(n==0){   //base case
         return "1";
        } 
        String s=count(n-1);
@@ -21,7 +21,7 @@ class Solution {
            }
        }
        str.append(count);
-            str.append(c);
-            return str.toString();
+       str.append(c);
+    return str.toString();
     }
 }
