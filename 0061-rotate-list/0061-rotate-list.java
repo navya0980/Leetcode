@@ -10,29 +10,33 @@
  */
 class Solution {
     public ListNode rotateRight(ListNode head, int k) {
-        if(head==null||head.next==null){
+        //checking the edge case
+        if(head==null||head.next==null||k==0){
             return head;
         }
+        //finding the size of the linked list
         ListNode temp=head;
-        int c=1;
+        int size=1;
         while(temp.next!=null){
             temp=temp.next;
-            c++;
+            size++;
 
         }
-        k=k%c;
-       while(k!=0){
+        
+       k=k%size;
+       if(k==0)return head;
+       temp.next=head;
+       int n=size-k;
        temp=head;
-        while(temp.next.next!=null){
-            temp=temp.next;
-        }
-        ListNode tail=temp.next;
-        temp.next=null;
-        tail.next=head;
-        head=tail;
-        k--;
+       for(int i=1;i<n;i++){
+           temp=temp.next;
        }
-       return head;
+       ListNode newHead=temp.next;
+       temp.next=null;
+
+
+       return newHead;
+
         
     }
 }
