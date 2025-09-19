@@ -1,14 +1,15 @@
 class Solution {
     public int reverse(int x) {
-        int n=Math.abs(x);
+        //converts to positive if negative
+       int num=Math.abs(x);
        int sum=0;
-       while(n>0){
+       while(num>0){
 
-        int rem=n%10;
+        int rem=num%10;
         if(sum>(Integer.MAX_VALUE-rem)/10)
          return 0;
         sum=sum*10+rem;
-        n=n/10;
+        num=num/10;
 
 
        }
