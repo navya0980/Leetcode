@@ -1,6 +1,6 @@
 class Solution {
     public int reverse(int x) {
-        //converts to positive if negative
+       
        
        long sum=0;
        while(x!=0){
