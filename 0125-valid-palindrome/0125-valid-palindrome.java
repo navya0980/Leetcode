@@ -1,32 +1,20 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        StringBuilder str=new StringBuilder(s.toLowerCase());
-        int left=0;
-        int right=str.length()-1;
-        return check(str,left,right);
-    }
-    public static boolean check(StringBuilder str,int left,int right){
-       
-        if(left>=right){
-            return true;
-        }
-         char ch1=str.charAt(left);
-        char ch2=str.charAt(right);
-        if((ch1>='a'&&ch1<='z')||(ch1>='0'&&ch1<='9')){
-            if((ch2>='a'&&ch2<='z')||(ch2>='0'&&ch2<='9')){
-                if(ch1!=ch2)
-                  return false;
-                else 
-                  return check(str,++left,--right);
-            }else{
-                return check(str,left,--right);
-            }
-
+       int left=0;
+       int right=s.length()-1;
+       while(left<right){
+        char l=s.charAt(left),r=s.charAt(right);
+        if(!Character.isLetterOrDigit(l)){
+            left++;
+        }else if(!Character.isLetterOrDigit(r)){
+            right--;
+        }else if(Character.toLowerCase(l)!=Character.toLowerCase(r)){
+            return false;
         }else{
-            return check(str,++left,right);
+            left++;
+            right--;
         }
-        
-
-        
+       } 
+       return true;
     }
 }
