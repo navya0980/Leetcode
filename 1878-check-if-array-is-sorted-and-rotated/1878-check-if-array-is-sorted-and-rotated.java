@@ -1,8 +1,16 @@
 class Solution {
     public boolean check(int[] nums) {
-        int count = 0, n = nums.length;
-        for (int i = 0; i < n; i++) 
-            if (nums[i] > nums[(i+1) % n] && ++count > 1) return false;
-        return count <= 1;
+        if(nums.length==0)return true;
+        int rotated=0;
+        for(int i=0;i<nums.length;i++){
+            if(i<nums.length-1&&nums[i]>nums[i+1]){
+              rotated++;
+            }
+        }
+        if(rotated==0||(rotated==1&&nums[0]>=nums[nums.length-1]))
+         return true;
+        else 
+        return false;
+        
     }
 }
