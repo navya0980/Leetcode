@@ -1,16 +1,18 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int n=nums.length;
-        int XOR1=0;
-        int XOR2=0;
-    
-       for(int i=0;i<=n;i++){
-        XOR1^=i;
-       
-       }
-       for(int i=0;i<n;i++){
-        XOR2^=nums[i];
-       }
-       return XOR1^XOR2;
+        for(int i=0;i<=nums.length;i++){
+            int flag=0;
+            for(int j=0;j<nums.length;j++){
+                if(nums[j]==i){
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0){
+                return i;
+            }
+        }
+        return -1;
+        
     }
 }
