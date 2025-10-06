@@ -1,5 +1,6 @@
 class Solution {
     public void setZeroes(int[][] matrix) {
+        //OPTIMAL APPROACH WITH CONSTANT SPACE
         int a=1;
         int m=matrix.length;
         int n=matrix[0].length;
