@@ -5,7 +5,7 @@ class Solution {
         int dupIndex=-1;
         while(start<=end){
             int mid=start+(end-start)/2;
-            System.out.println(nums[mid]);
+           
             int len=mid-start+1;
             if(mid>0 &&  nums[mid-1]==nums[mid]){
                  dupIndex=mid-1;
