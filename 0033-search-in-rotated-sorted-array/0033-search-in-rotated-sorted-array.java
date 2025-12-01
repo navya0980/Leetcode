@@ -11,7 +11,7 @@ class Solution {
         }
       }
       int peak=findPeak(nums);
-      System.out.println(peak);
+      
       if(target==nums[peak]){
         return peak;
       }
@@ -45,7 +45,8 @@ class Solution {
                 return mid;
             }else if(mid>0&&nums[mid]<nums[mid-1]){
                 return mid-1;
-            }else if(nums[mid]<=nums[0]){
+            }
+            else if(nums[mid]<=nums[0]){
                 end=mid-1;
             }else if(nums[mid]>=nums[0]){
                 start=mid+1;
