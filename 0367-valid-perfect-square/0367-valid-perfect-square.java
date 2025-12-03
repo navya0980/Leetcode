@@ -8,9 +8,9 @@ class Solution {
       while(low<=high){
         int mid=low+(high-low)/2;
         
-        if(long(mid*mid)==num){
+        if((long)mid*mid==num){
             return true;
-        }else if(long(mid*mid)>num){
+        }else if((long)mid*mid>num){
           high=mid-1;
         }else{
             low=mid+1;
