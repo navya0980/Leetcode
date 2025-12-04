@@ -3,11 +3,11 @@ class Solution {
         int low=1;
         int high=Arrays.stream(piles).max().getAsInt();
         
-       int min=Integer.MAX_VALUE;
+      
         while(low<=high){
             int mid=low+(high-low)/2;
             if(isMin(mid,h,piles)){
-                min=Math.min(min,mid);
+              
                 high=mid-1;
             }else{
                 low=mid+1;
