@@ -1,7 +1,7 @@
 class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
         int low=1;
-        int high=1000000;
+        int high=Arrays.stream(nums).max().getAsInt();
         while(low<high){
             int mid=low+(high-low)/2;
             if(sumOf(nums,mid)<=threshold){
