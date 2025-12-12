@@ -155,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1646-kth-missing-positive-number](https://github.com/navya0980/Leetcode/tree/master/1646-kth-missing-positive-number) |
 | [1791-richest-customer-wealth](https://github.com/navya0980/Leetcode/tree/master/1791-richest-customer-wealth) |
 | [1878-check-if-array-is-sorted-and-rotated](https://github.com/navya0980/Leetcode/tree/master/1878-check-if-array-is-sorted-and-rotated) |
+| [1901-find-a-peak-element-ii](https://github.com/navya0980/Leetcode/tree/master/1901-find-a-peak-element-ii) |
 | [2047-find-a-peak-element-ii](https://github.com/navya0980/Leetcode/tree/master/2047-find-a-peak-element-ii) |
 | [2219-maximum-number-of-words-found-in-sentences](https://github.com/navya0980/Leetcode/tree/master/2219-maximum-number-of-words-found-in-sentences) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/navya0980/Leetcode/tree/master/2271-rearrange-array-elements-by-sign) |
@@ -196,6 +197,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1539-kth-missing-positive-number](https://github.com/navya0980/Leetcode/tree/master/1539-kth-missing-positive-number) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/navya0980/Leetcode/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 | [1646-kth-missing-positive-number](https://github.com/navya0980/Leetcode/tree/master/1646-kth-missing-positive-number) |
+| [1901-find-a-peak-element-ii](https://github.com/navya0980/Leetcode/tree/master/1901-find-a-peak-element-ii) |
 | [2047-find-a-peak-element-ii](https://github.com/navya0980/Leetcode/tree/master/2047-find-a-peak-element-ii) |
 ## Interactive
 |  |
@@ -212,6 +214,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0074-search-a-2d-matrix](https://github.com/navya0980/Leetcode/tree/master/0074-search-a-2d-matrix) |
 | [0240-search-a-2d-matrix-ii](https://github.com/navya0980/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [1791-richest-customer-wealth](https://github.com/navya0980/Leetcode/tree/master/1791-richest-customer-wealth) |
+| [1901-find-a-peak-element-ii](https://github.com/navya0980/Leetcode/tree/master/1901-find-a-peak-element-ii) |
 | [2047-find-a-peak-element-ii](https://github.com/navya0980/Leetcode/tree/master/2047-find-a-peak-element-ii) |
 | [3227-find-missing-and-repeated-values](https://github.com/navya0980/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
 ## Greedy
