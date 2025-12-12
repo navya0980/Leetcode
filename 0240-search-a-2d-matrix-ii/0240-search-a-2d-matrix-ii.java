@@ -1,18 +1,15 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        int row=0;
-        int col=matrix[0].length-1;
-        while(row<matrix.length&&col>=0){
-            int n=matrix[row][col];
-            if(target>n){
-                row++;
-            }else if(target<n){
-                col--;
-            }else{
+        int m=matrix.length,n=matrix[0].length;
+        int i=0,j=n-1;
+        while(i<m&&j>=0){
+            if(target==matrix[i][j]){
                 return true;
-                
+            }else if(target<matrix[i][j]){
+                j--;
+            }else{
+                i++;
             }
-
         }
         return false;
     }
