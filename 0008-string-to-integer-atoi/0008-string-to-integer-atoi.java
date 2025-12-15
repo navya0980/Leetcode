@@ -1,44 +1,77 @@
 class Solution {
     public int myAtoi(String s) {
-        if(s.length()==0){
+       
+        s=s.trim();
+         if(s.length()==0){
             return 0;
         }
-         int i=0;
-         
-         int ans=0;
-         boolean minus=false;
-         while(i<s.length()&&s.charAt(i)==' '){
+      int ans=0;
+      int isNeg=0;
+     
+        if(s.charAt(0)=='+'){
+             
+             for(int i=1;i<s.length();i++){
+               int ch=s.charAt(i)-'0';
+              
+                if(ch>=0&&ch<=9){
+                     if(ans>(Integer.MAX_VALUE-ch)/10){
+                if(isNeg==1){
+                    return Integer.MIN_VALUE;
+                }else{
+                    return Integer.MAX_VALUE;
+                }
+               }
+                  ans=ans*10+ch;
 
-            i++;
-         }
-         if(i<s.length()&&s.charAt(i)=='-'){
-          minus=true;   
-            i++;
-         }else if(i<s.length()&&s.charAt(i)=='+')i++;
-         while(i<s.length()&&s.charAt(i)=='0'){
-            i++;
-         }
-         while(i<s.length()&&s.charAt(i)>='0'&&s.charAt(i)<='9'){
-           Character ch=s.charAt(i);
-           int n=ch-'0';
-           if(ans>(Integer.MAX_VALUE-n)/10){
-            if(minus==false){
-              return Integer.MAX_VALUE;  
-            }else{
-                return Integer.MIN_VALUE;
+                }else{
+                    break;
+                }
             }
-                
-           }
-           
-            ans=ans*10+n;
-            
+        }else if(s.charAt(0)=='-'){
+          System.out.println(s);
+          isNeg=1;
+          
+             for(int i=1;i<s.length();i++){
+               int ch=s.charAt(i)-'0';
+              
+                System.out.println(ch);
+                if(ch>=0&&ch<=9){
+                     if(ans>(Integer.MAX_VALUE-ch)/10){
+                if(isNeg==1){
+                    return Integer.MIN_VALUE;
+                }else{
+                    return Integer.MAX_VALUE;
+                }
+               }
+                  ans=ans*10+ch;
+                  System.out.println(ans);
 
-            
-            i++;
-         }
-         if(minus==true){
-            return ans*-1;
-         }
-         return ans;
+                }else{
+                    break;
+                }
+            }
+        }else{
+            for(int i=0;i<s.length();i++){
+                int ch=s.charAt(i)-'0';
+               
+                if(ch>=0&&ch<=9){
+                     if(ans>(Integer.MAX_VALUE-ch)/10){
+                if(isNeg==1){
+                    return Integer.MIN_VALUE;
+                }else{
+                    return Integer.MAX_VALUE;
+                }
+               }
+                  ans=ans*10+ch;
+
+                }else{
+                    break;
+                }
+            }
+        }
+      if(isNeg==1){
+        return ans*-1;
+      }
+      return ans;
     }
 }
