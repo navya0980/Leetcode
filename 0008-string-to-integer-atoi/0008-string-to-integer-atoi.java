@@ -28,13 +28,13 @@ class Solution {
                 }
             }
         }else if(s.charAt(0)=='-'){
-          System.out.println(s);
+        
           isNeg=1;
           
              for(int i=1;i<s.length();i++){
                int ch=s.charAt(i)-'0';
               
-                System.out.println(ch);
+               
                 if(ch>=0&&ch<=9){
                      if(ans>(Integer.MAX_VALUE-ch)/10){
                 if(isNeg==1){
@@ -44,7 +44,7 @@ class Solution {
                 }
                }
                   ans=ans*10+ch;
-                  System.out.println(ans);
+                 
 
                 }else{
                     break;
