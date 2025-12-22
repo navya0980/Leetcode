@@ -1,27 +1,31 @@
 class Solution {
     public String countAndSay(int n) {
-      return count(n);
+        return rle("1",n-1);
     }
-    public static String count(int n){
-         if(n==1){   //base case
-        return "1";
-       } 
-       String s=count(n-1);
-       StringBuilder str=new StringBuilder();
-       char c=s.charAt(0);
-       int count=0;
-       for(int i=0;i<s.length();i++){
-           if(s.charAt(i)==c){
-            count++;
-           }else{
-            str.append(count);
-            str.append(c);
-            c=s.charAt(i);
-            count=1;
-           }
-       }
-       str.append(count);
-       str.append(c);
-    return str.toString();
+    public static String rle(String num,int n){
+        if(n==0){
+            return num;
+        }
+        StringBuilder ans=new StringBuilder();
+        int count=0;
+        char def='\0';
+        for(int i=0;i<num.length();i++){
+            char ch=num.charAt(i);
+            if(count==0){
+              def=ch;
+            }
+            if(ch==def){
+                count++;
+            }else{
+               ans.append(count+"");
+               ans.append(def);
+               count=1;
+               def=ch; 
+            }
+        }
+         ans.append(count+"");
+               ans.append(def);
+               System.out.println(ans.toString());
+        return rle(ans.toString(),n-1);
     }
 }
