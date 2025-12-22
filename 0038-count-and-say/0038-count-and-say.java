@@ -25,7 +25,7 @@ class Solution {
         }
          ans.append(count+"");
                ans.append(def);
-               System.out.println(ans.toString());
+            
         return rle(ans.toString(),n-1);
     }
 }
