@@ -1,31 +1,30 @@
 class Solution {
     public String countAndSay(int n) {
-        return rle("1",n-1);
+        StringBuilder ans=new StringBuilder("1");
+        return rle(n-1,ans);
     }
-    public static String rle(String num,int n){
+    public static String rle(int n,StringBuilder ans){
         if(n==0){
-            return num;
+            return ans.toString();
         }
-        StringBuilder ans=new StringBuilder();
-        int count=0;
-        char def='\0';
-        for(int i=0;i<num.length();i++){
-            char ch=num.charAt(i);
-            if(count==0){
-              def=ch;
-            }
-            if(ch==def){
-                count++;
-            }else{
-               ans.append(count+"");
-               ans.append(def);
-               count=1;
-               def=ch; 
-            }
+        StringBuilder str=new StringBuilder();
+       int count=0;
+       char ch='\0';
+       for(int i=0;i<ans.length();i++){
+        if(count==0){
+            ch=ans.charAt(i);
         }
-         ans.append(count+"");
-               ans.append(def);
-            
-        return rle(ans.toString(),n-1);
+        if(ch==ans.charAt(i)){
+            count++;
+        }else{
+            str.append(count);
+            str.append(ch);
+            count=1;ch=ans.charAt(i);
+        }
+       }
+        str.append(count);
+        str.append(ch);
+        return rle(n-1,str);
+
     }
 }
