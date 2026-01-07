@@ -3,18 +3,18 @@ class Solution {
         if(a.equals(b)){
             return 1;
         }
-        String c=a;
+        StringBuilder c=new StringBuilder(a);
         int count=1;
         while(c.length()<b.length()){
-            c+=a;
+            c.append(a);
             count++;
         }
-        if(!c.contains(b)){
+        if(c.indexOf(b)==-1){
            
-             c+=a;
+            c.append(a);
             count++;
         }
-        if(!c.contains(b)){
+        if(c.indexOf(b)==-1){
            return -1;
         }
 
