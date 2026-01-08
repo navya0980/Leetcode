@@ -70,6 +70,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1021-remove-outermost-parentheses](https://github.com/navya0980/Leetcode/tree/master/1021-remove-outermost-parentheses) |
 | [1078-remove-outermost-parentheses](https://github.com/navya0980/Leetcode/tree/master/1078-remove-outermost-parentheses) |
 | [1205-defanging-an-ip-address](https://github.com/navya0980/Leetcode/tree/master/1205-defanging-an-ip-address) |
+| [1392-longest-happy-prefix](https://github.com/navya0980/Leetcode/tree/master/1392-longest-happy-prefix) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/navya0980/Leetcode/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/navya0980/Leetcode/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
 | [1781-sum-of-beauty-of-all-substrings](https://github.com/navya0980/Leetcode/tree/master/1781-sum-of-beauty-of-all-substrings) |
@@ -325,6 +326,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0686-repeated-string-match](https://github.com/navya0980/Leetcode/tree/master/0686-repeated-string-match) |
 | [0796-rotate-string](https://github.com/navya0980/Leetcode/tree/master/0796-rotate-string) |
 | [0812-rotate-string](https://github.com/navya0980/Leetcode/tree/master/0812-rotate-string) |
+| [1392-longest-happy-prefix](https://github.com/navya0980/Leetcode/tree/master/1392-longest-happy-prefix) |
 ## Linked List
 |  |
 | ------- |
@@ -375,4 +377,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/navya0980/Leetcode/tree/master/0128-longest-consecutive-sequence) |
+## Rolling Hash
+|  |
+| ------- |
+| [1392-longest-happy-prefix](https://github.com/navya0980/Leetcode/tree/master/1392-longest-happy-prefix) |
+## Hash Function
+|  |
+| ------- |
+| [1392-longest-happy-prefix](https://github.com/navya0980/Leetcode/tree/master/1392-longest-happy-prefix) |
 <!---LeetCode Topics End-->
