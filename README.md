@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
 | [0367-valid-perfect-square](https://github.com/navya0980/Leetcode/tree/master/0367-valid-perfect-square) |
 | [1013-fibonacci-number](https://github.com/navya0980/Leetcode/tree/master/1013-fibonacci-number) |
+| [1390-four-divisors](https://github.com/navya0980/Leetcode/tree/master/1390-four-divisors) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/navya0980/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [2032-largest-odd-number-in-string](https://github.com/navya0980/Leetcode/tree/master/2032-largest-odd-number-in-string) |
 | [3227-find-missing-and-repeated-values](https://github.com/navya0980/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
@@ -156,6 +157,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/navya0980/Leetcode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1185-find-in-mountain-array](https://github.com/navya0980/Leetcode/tree/master/1185-find-in-mountain-array) |
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/navya0980/Leetcode/tree/master/1283-find-the-smallest-divisor-given-a-threshold) |
+| [1390-four-divisors](https://github.com/navya0980/Leetcode/tree/master/1390-four-divisors) |
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/navya0980/Leetcode/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/navya0980/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/navya0980/Leetcode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
