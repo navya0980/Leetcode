@@ -13,13 +13,12 @@ class Solution {
            }
             return;
         }
-        for(int i=index;i<arr.length;i++){
-            if(i>index&&arr[i]==arr[i-1])continue;
+        
            
-            list.add(arr[i]);
-            combination(i+1,arr,list,ans);
+            list.add(arr[index]);
+            combination(index+1,arr,list,ans);
             list.removeLast();
-            combination(i+1,arr,list,ans);
-        }
+            combination(index+1,arr,list,ans);
+        
     }
 }
