@@ -11,15 +11,15 @@
  */
 public class Solution {
     public ListNode detectCycle(ListNode head) {
-        Map<ListNode,Integer> nodeMap=new HashMap<>();
+      List<ListNode>list=new ArrayList<>();
         ListNode temp=head;
-        int count=0;
+       
         while(temp!=null){
-            if(nodeMap.containsKey(temp)){
+            if(list.contains(temp)){
                 return temp;
             }
-            nodeMap.put(temp,count);
-            count++;
+           list.add(temp);
+           
             temp=temp.next;
         }
         return null;
