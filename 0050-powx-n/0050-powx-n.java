@@ -21,7 +21,7 @@ class Solution {
         x*=x;
         n/=2;
        }
-       System.out.println(num);
+       
        return findPow(x,num,n);
         
     }
