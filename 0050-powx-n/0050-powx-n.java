@@ -1,27 +1,28 @@
 class Solution {
-    public double myPow(double x, int num) {
-         if(num==Integer.MIN_VALUE && x!=1 && x!=-1){
+    public double myPow(double x, int n) {
+        if(n==Integer.MIN_VALUE&&x!=1&&x!=-1){
             return 0;
         }
-        double ans=1;
-        int n=num;
-        if(num<0){
-            n*=-1;
-            
+        double num=1;
+        double ans=findPow(x,num,Math.abs(n));
+        if(n<0){
+            return 1/ans;
         }
-      while(n>0){
+        return ans;
+    }
+    static double findPow(double x,double num,int n){
+       if(n<=0){
+        return num;
+       }
+       if(n%2==1){
+        num=num*x;
+        n--;
+       }else{
+        x*=x;
+        n/=2;
+       }
+       System.out.println(num);
+       return findPow(x,num,n);
         
-         if(n%2==1){
-        ans=ans*x;
-         n-=1;
-        }else{
-            n=n/2;
-            x=x*x;
-        }
-      }
-      if(num<0){
-        return 1/ans;
-      }
-      return ans;
     }
 }
