@@ -1,51 +1,38 @@
 class Solution {
     public int myAtoi(String s) {
-       
-        s=s.trim();
-         if(s.length()==0){
-            return 0;
+        int i=0;int sign=1;int num=0;
+        while(i<s.length()&&s.charAt(i)==' '){
+            i++;
         }
-     
-      int isNeg=0;
-     
-        if(s.charAt(0)=='+'){
-             
-           return  findNum(s,isNeg,1);
-        }else if(s.charAt(0)=='-'){
-        
-          isNeg=1;
-          
-             return  findNum(s,isNeg,1);
-        }
-
-        return  findNum(s,isNeg,0);
-        
-       
-    
-    }
-    public static int findNum(String s,int isNeg,int index){
-         int ans=0;
-          for(int i=index;i<s.length();i++){
-               int ch=s.charAt(i)-'0';
-              
-                if(ch>=0&&ch<=9){
-                     if(ans>(Integer.MAX_VALUE-ch)/10){
-                if(isNeg==1){
-                    return Integer.MIN_VALUE;
-                }else{
-                    return Integer.MAX_VALUE;
-                }
-               }
-                  ans=ans*10+ch;
-
-                }else{
-                   break;  
-                }
+        if(i<s.length()&&(s.charAt(i)=='-'||s.charAt(i)=='+')){
+            if(s.charAt(i)=='-'){
+                sign=-1;
             }
-            if(isNeg==1){
-                         return ans*-1;
-                       }
-                    return ans;
-
+            i++;
+        }
+        int ans=getNumber(s,i,sign,num);
+        if(ans==Integer.MIN_VALUE){
+            return ans;
+        }
+        return sign*ans;
+    }
+    static int getNumber(String s,int i,int sign,int num){
+        if(i>=s.length()){
+            return num;
+        }
+        int ch=s.charAt(i)-'0';
+        if(ch>=0&&ch<=9){
+            System.out.println(num);
+            if(num>(Integer.MAX_VALUE-ch)/10){
+                if(sign==-1){
+                    return Integer.MIN_VALUE;
+                }
+                return Integer.MAX_VALUE;
+            }
+            num=num*10+ch;
+            return getNumber(s,i+1,sign,num);
+        }else{
+            return num;
+        }
     }
 }
