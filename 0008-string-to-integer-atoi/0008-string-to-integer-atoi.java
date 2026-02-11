@@ -22,7 +22,7 @@ class Solution {
         }
         int ch=s.charAt(i)-'0';
         if(ch>=0&&ch<=9){
-            System.out.println(num);
+           
             if(num>(Integer.MAX_VALUE-ch)/10){
                 if(sign==-1){
                     return Integer.MIN_VALUE;
