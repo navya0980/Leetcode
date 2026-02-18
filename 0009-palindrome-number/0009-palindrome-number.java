@@ -1,17 +1,16 @@
 class Solution {
     public boolean isPalindrome(int x) {
-         
         if(x<0){
-            //negative number can never be a palindrome
             return false;
         }
-        int reversedNumber=0;
         int num=x;
+        int ans=0;
         while(num>0){
-            reversedNumber=reversedNumber*10+num%10;
-            num/=10;
-        }
-        return reversedNumber==x;
+            int rem=num%10;
+            ans=ans*10+rem;
+            num=num/10;
 
+        }
+        return ans==x;
     }
 }
