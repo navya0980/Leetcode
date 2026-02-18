@@ -1,22 +1,15 @@
 class Solution {
     public int reverse(int x) {
-       
-       
-       long sum=0;
-       while(x!=0){
-
-       
-       
-        sum=sum*10+ x%10;
-        x=x/10;
-
-
-       }
-      if(sum>Integer.MAX_VALUE||sum<Integer.MIN_VALUE){
-        return 0;
-      }
-      
-      return (int)sum;
-        
+       int n=Math.abs(x);
+       int ans=0;
+       while(n>0){
+        int rem=n%10;
+        if(ans>(Integer.MAX_VALUE-rem)/10){
+            return 0;
+        }
+        ans=ans*10+rem;
+        n=n/10;
+       } 
+       return (x<0)?ans*-1:ans;
     }
-    }
+}
