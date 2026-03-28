@@ -1,18 +1,14 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        //Two pointer approach
-        int i=0,j=1;
-        while(j<nums.length){
-            while(j<nums.length&&nums[i]==nums[j]){
-                j++;
-            }
-           if(j<nums.length){
-            nums[i+1]=nums[j];
-            i++;
-           }
-           System.out.println(i);
+        Set<Integer> set=new TreeSet<>();
+        for(int i=0;i<nums.length;i++){
+            set.add(nums[i]);
         }
-        
-        return i+1;
+        int i=0;
+        for(int n:set){
+            nums[i]=n;
+            i++;
+        }
+        return i;
     }
 }
