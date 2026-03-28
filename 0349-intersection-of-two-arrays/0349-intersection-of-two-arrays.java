@@ -1,18 +1,35 @@
 class Solution {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        int max1=Arrays.stream(nums1).max().getAsInt();
-        int max2=Arrays.stream(nums2).max().getAsInt();
-        int max=(max1>max2)?max1:max2;
-        int hash[]=new int[max+1];
-        List<Integer>list=new ArrayList<>();
-        for(int i=0;i<nums1.length;i++){
-            hash[nums1[i]]=1;
+    
+    void addList(ArrayList<Integer> list, int x) {
+        if(list.isEmpty() || list.get(list.size() - 1) != x) {
+            list.add(x);
         }
-        for(int i=0;i<nums2.length;i++){
-           if(hash[nums2[i]]==1 &&!list.contains(nums2[i])){
-            list.add(nums2[i]);
-           }
+    }
+
+    public int[] intersection(int[] arr1, int[] arr2) {
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        int i = 0, j = 0;
+        
+        while(i < arr1.length && j < arr2.length) {
+            if(arr1[i] == arr2[j]) {
+                addList(list, arr1[i]);
+                i++;
+                j++;
+            } else if(arr1[i] < arr2[j]) {
+                i++;
+            } else {
+                j++;
+            }
         }
-       return list.stream().mapToInt(Integer::intValue).toArray();
+        
+        int[] result = new int[list.size()];
+        for(int k = 0; k < result.length; k++) {
+            result[k] = list.get(k);
+        }
+        
+        return result;
     }
 }
