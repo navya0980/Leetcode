@@ -11,9 +11,9 @@ class Solution {
             }
             if(right<nums.length){
                 int temp=nums[right];
-                nums[right]=nums[left];
-                nums[left]=temp;
-                left++;right++;
+                nums[right++]=nums[left];
+                nums[left++]=temp;
+                
             }
         }
     }
