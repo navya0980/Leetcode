@@ -1,38 +1,37 @@
 class Solution {
     public int myAtoi(String s) {
-        int i=0;int sign=1;int num=0;
-        while(i<s.length()&&s.charAt(i)==' '){
-            i++;
-        }
-        if(i<s.length()&&(s.charAt(i)=='-'||s.charAt(i)=='+')){
-            if(s.charAt(i)=='-'){
-                sign=-1;
-            }
-            i++;
-        }
-        int ans=getNumber(s,i,sign,num);
-        if(ans==Integer.MIN_VALUE){
-            return ans;
-        }
-        return sign*ans;
+    
+    s=s.trim();
+    if(s.length()==0){
+        return 0;
     }
-    static int getNumber(String s,int i,int sign,int num){
-        if(i>=s.length()){
-            return num;
-        }
-        int ch=s.charAt(i)-'0';
-        if(ch>=0&&ch<=9){
-           
-            if(num>(Integer.MAX_VALUE-ch)/10){
-                if(sign==-1){
-                    return Integer.MIN_VALUE;
-                }
-                return Integer.MAX_VALUE;
-            }
-            num=num*10+ch;
-            return getNumber(s,i+1,sign,num);
+    int isNeg=0;
+    int i=0;
+    int ans=0;
+    if(s.charAt(0)=='-'){
+         isNeg=1;
+         i=1;
+    }else if(s.charAt(0)=='+'){
+        i=1;
+    }
+    while(i<s.length()&&s.charAt(i)=='0'){
+        i++;
+    }
+    while(i<s.length()){
+        char ch=s.charAt(i);
+        if(ch>='0'&&ch<='9'){
+         int c=ch-'0';
+         if(ans>(Integer.MAX_VALUE-c)/10){
+            return isNeg==1?Integer.MIN_VALUE:Integer.MAX_VALUE;
+         }
+         ans=ans*10+c;
+          i++;
         }else{
-            return num;
+            break;
         }
+       
+         
+    }
+    return isNeg==0?ans:ans*-1;
     }
 }
