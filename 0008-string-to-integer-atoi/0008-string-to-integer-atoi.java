@@ -17,7 +17,12 @@ class Solution {
     while(i<s.length()&&s.charAt(i)=='0'){
         i++;
     }
-    while(i<s.length()){
+    return stoint(s,i,ans,isNeg);
+    }
+    static int stoint(String s,int i,int ans,int isNeg){
+        if(i>=s.length()){
+            return isNeg==0?ans:ans*-1;
+        }
         char ch=s.charAt(i);
         if(ch>='0'&&ch<='9'){
          int c=ch-'0';
@@ -25,13 +30,10 @@ class Solution {
             return isNeg==1?Integer.MIN_VALUE:Integer.MAX_VALUE;
          }
          ans=ans*10+c;
-          i++;
-        }else{
-            break;
+        return stoint(s,++i,ans,isNeg);
         }
+            return isNeg==0?ans:ans*-1;
+        
        
-         
-    }
-    return isNeg==0?ans:ans*-1;
     }
 }
