@@ -1,26 +1,25 @@
 class Solution {
     public double myPow(double x, int n) {
-        double num=1;
-        if(n==Integer.MIN_VALUE&&x!=1&&x!=-1){
+        if(n==Integer.MIN_VALUE&&x!=-1&&x!=1){
             return 0;
         }
-        double ans= getPow(x,num,Math.abs(n));
-        if(n<0){
-            return 1/ans;
-        }
-        return ans;
+        int deg=Math.abs(n);
+        double ans=1;
+        double pow= calcPow(x,deg,ans);
+       return (n<0)?1/pow:pow;
     }
-    static double getPow(double x,double num,int n){
-        if(n<=0){
-            return num;
+    static double calcPow(double x,int deg,double ans){
+        if(deg<=0){
+            return ans;
         }
-        if(n%2==1){
-            num=num*x;
-            n--;
+        if(deg%2==1){
+            ans=ans*x;
+            deg--;
         }else{
             x=x*x;
-            n/=2;
+            deg/=2;
         }
-        return getPow(x,num,n);
+        return calcPow(x,deg,ans);
+        
     }
 }
