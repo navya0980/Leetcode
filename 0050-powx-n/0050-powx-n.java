@@ -14,11 +14,11 @@ class Solution {
         }
         if(deg%2==1){
             ans=ans*x;
-            deg--;
-        }else{
-            x=x*x;
-            deg/=2;
         }
+           
+           x=x*x;
+            deg/=2;
+        
         return calcPow(x,deg,ans);
         
     }
