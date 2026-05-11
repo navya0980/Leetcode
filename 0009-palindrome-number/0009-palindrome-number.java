@@ -11,7 +11,7 @@ class Solution {
             x=x/10;
         }
         
-        return (num==n)?true:false;
+        return num==n;
         
     }
 }
