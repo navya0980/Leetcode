@@ -1,14 +1,16 @@
 class Solution {
     public int reverse(int x) {
+        int result=0;
         int num=Math.abs(x);
-        int rev=0;
         while(num>0){
-        if(rev>(Integer.MAX_VALUE-(num%10))/10){
-            return 0;
+            int rem=num%10;
+            if(result>(Integer.MAX_VALUE-rem)/10){
+                return 0;
+            }
+            result=result*10+rem;
+            num=num/10;
+
         }
-          rev=rev*10+num%10;
-          num=num/10;
-        }
-        return (x<0)?rev*-1:rev;
+        return (x<0)?result*-1:result;
     }
 }
