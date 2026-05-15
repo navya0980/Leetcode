@@ -1,17 +1,16 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        //OPTIMAL APPROACH - O(n)
-        int counter =0,num=0;
-        for(int i=0;i<nums.length;i++){
-            if(counter==0){
+        int n=nums.length;
+        int num=nums[0];
+        int count=1;
+        for(int i=1;i<n;i++){
+            if(count==0){
                 num=nums[i];
-                counter=1;
-                continue;
             }
-            if(nums[i]==num){
-                counter++;
+            if(num==nums[i]){
+                count++;
             }else{
-                counter--;
+                count--;
             }
         }
         return num;
