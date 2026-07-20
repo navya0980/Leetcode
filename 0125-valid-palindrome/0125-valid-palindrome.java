@@ -7,22 +7,14 @@ class Solution {
         int i = 0, j = s.length() - 1;
 
         while (i < j) {
+    while (i < j && !Character.isLetterOrDigit(s.charAt(i))) i++;
+    while (i < j && !Character.isLetterOrDigit(s.charAt(j))) j--;
 
-            while (i < j && str.indexOf(String.valueOf(s.charAt(i))) == -1) {
-                i++;
-            }
+    if (s.charAt(i) != s.charAt(j)) return false;
 
-            while (i < j && str.indexOf(String.valueOf(s.charAt(j))) == -1) {
-                j--;
-            }
-
-            if (s.charAt(i) != s.charAt(j)) {
-                return false;
-            }
-
-            i++;
-            j--;
-        }
+    i++;
+    j--;
+}
 
         return true;
     }
