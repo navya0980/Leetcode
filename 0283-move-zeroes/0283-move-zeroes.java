@@ -6,12 +6,13 @@ class Solution {
                 j++;
             }
             if(j<nums.length){
-                int temp=nums[i];
                 nums[i]=nums[j];
-                nums[j]=temp;
                 i++;
                 j++;
             }
+        }
+        while(i<nums.length){
+            nums[i++]=0;
         }
     }
 }
