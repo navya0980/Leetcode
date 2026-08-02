@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/navya0980/Leetcode/tree/master/0268-missing-number) |
 | [0367-valid-perfect-square](https://github.com/navya0980/Leetcode/tree/master/0367-valid-perfect-square) |
 | [0509-fibonacci-number](https://github.com/navya0980/Leetcode/tree/master/0509-fibonacci-number) |
+| [0877-stone-game](https://github.com/navya0980/Leetcode/tree/master/0877-stone-game) |
 | [1013-fibonacci-number](https://github.com/navya0980/Leetcode/tree/master/1013-fibonacci-number) |
 | [1390-four-divisors](https://github.com/navya0980/Leetcode/tree/master/1390-four-divisors) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/navya0980/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
@@ -104,6 +105,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0198-house-robber](https://github.com/navya0980/Leetcode/tree/master/0198-house-robber) |
 | [0410-split-array-largest-sum](https://github.com/navya0980/Leetcode/tree/master/0410-split-array-largest-sum) |
 | [0509-fibonacci-number](https://github.com/navya0980/Leetcode/tree/master/0509-fibonacci-number) |
+| [0877-stone-game](https://github.com/navya0980/Leetcode/tree/master/0877-stone-game) |
 | [1013-fibonacci-number](https://github.com/navya0980/Leetcode/tree/master/1013-fibonacci-number) |
 ## Recursion
 |  |
@@ -173,6 +175,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0745-find-smallest-letter-greater-than-target](https://github.com/navya0980/Leetcode/tree/master/0745-find-smallest-letter-greater-than-target) |
 | [0792-binary-search](https://github.com/navya0980/Leetcode/tree/master/0792-binary-search) |
 | [0875-koko-eating-bananas](https://github.com/navya0980/Leetcode/tree/master/0875-koko-eating-bananas) |
+| [0877-stone-game](https://github.com/navya0980/Leetcode/tree/master/0877-stone-game) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/navya0980/Leetcode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [0905-sort-array-by-parity](https://github.com/navya0980/Leetcode/tree/master/0905-sort-array-by-parity) |
 | [0907-koko-eating-bananas](https://github.com/navya0980/Leetcode/tree/master/0907-koko-eating-bananas) |
@@ -435,4 +438,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/navya0980/Leetcode/tree/master/0128-longest-consecutive-sequence) |
+## Game Theory
+|  |
+| ------- |
+| [0877-stone-game](https://github.com/navya0980/Leetcode/tree/master/0877-stone-game) |
 <!---LeetCode Topics End-->
