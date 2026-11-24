@@ -6,7 +6,7 @@ class Solution {
         int rem=n%10;
         if(ans>((Integer.MAX_VALUE-rem)/10))
           return 0;
-        ans=ans*10+rem;
+        ans=ans*10+(rem);
         n=n/10;
 
 
