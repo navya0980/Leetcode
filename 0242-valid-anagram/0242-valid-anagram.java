@@ -3,10 +3,9 @@ class Solution {
         if(s.length()!=t.length())return false;
         int[] hash=new int[26];
         for(int i=0;i<s.length();i++){
-            char ch1=s.charAt(i);
-            char ch2=t.charAt(i);
-            hash[ch1-'a']++;
-            hash[ch2-'a']--;
+           
+            hash[s.charAt(i)-'a']++;
+            hash[t.charAt(i)-'a']--;
         }
         for(int i=0;i<hash.length;i++){
             if(hash[i]!=0){
